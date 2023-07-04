@@ -1,0 +1,115 @@
+id,name_simple,revelation_city,verses_count,translated_name
+1,Al-Fatihah,makkah,7,The Opener
+2,Al-Baqarah,madinah,286,The Cow
+3,Ali 'Imran,madinah,200,Family of Imran
+4,An-Nisa,madinah,176,The Women
+5,Al-Ma'idah,madinah,120,The Table Spread
+6,Al-An'am,makkah,165,The Cattle
+7,Al-A'raf,makkah,206,The Heights
+8,Al-Anfal,madinah,75,The Spoils of War
+9,At-Tawbah,madinah,129,The Repentance
+10,Yunus,makkah,109,Jonah
+11,Hud,makkah,123,Hud
+12,Yusuf,makkah,111,Joseph
+13,Ar-Ra'd,madinah,43,The Thunder
+14,Ibrahim,makkah,52,Abraham
+15,Al-Hijr,makkah,99,The Rocky Tract
+16,An-Nahl,makkah,128,The Bee
+17,Al-Isra,makkah,111,The Night Journey
+18,Al-Kahf,makkah,110,The Cave
+19,Maryam,makkah,98,Mary
+20,Taha,makkah,135,Ta-Ha
+21,Al-Anbya,makkah,112,The Prophets
+22,Al-Hajj,madinah,78,The Pilgrimage
+23,Al-Mu'minun,makkah,118,The Believers
+24,An-Nur,madinah,64,The Light
+25,Al-Furqan,makkah,77,The Criterion
+26,Ash-Shu'ara,makkah,227,The Poets
+27,An-Naml,makkah,93,The Ant
+28,Al-Qasas,makkah,88,The Stories
+29,Al-'Ankabut,makkah,69,The Spider
+30,Ar-Rum,makkah,60,The Romans
+31,Luqman,makkah,34,Luqman
+32,As-Sajdah,makkah,30,The Prostration
+33,Al-Ahzab,madinah,73,The Combined Forces
+34,Saba,makkah,54,Sheba
+35,Fatir,makkah,45,Originator
+36,Ya-Sin,makkah,83,Ya Sin
+37,As-Saffat,makkah,182,Those who set the Ranks
+38,Sad,makkah,88,"The Letter ""Saad"""
+39,Az-Zumar,makkah,75,The Troops
+40,Ghafir,makkah,85,The Forgiver
+41,Fussilat,makkah,54,Explained in Detail
+42,Ash-Shuraa,makkah,53,The Consultation
+43,Az-Zukhruf,makkah,89,The Ornaments of Gold
+44,Ad-Dukhan,makkah,59,The Smoke
+45,Al-Jathiyah,makkah,37,The Crouching
+46,Al-Ahqaf,makkah,35,The Wind-Curved Sandhills
+47,Muhammad,madinah,38,Muhammad
+48,Al-Fath,madinah,29,The Victory
+49,Al-Hujurat,madinah,18,The Rooms
+50,Qaf,makkah,45,"The Letter ""Qaf"""
+51,Adh-Dhariyat,makkah,60,The Winnowing Winds
+52,At-Tur,makkah,49,The Mount
+53,An-Najm,makkah,62,The Star
+54,Al-Qamar,makkah,55,The Moon
+55,Ar-Rahman,madinah,78,The Beneficent
+56,Al-Waqi'ah,makkah,96,The Inevitable
+57,Al-Hadid,madinah,29,The Iron
+58,Al-Mujadila,madinah,22,The Pleading Woman
+59,Al-Hashr,madinah,24,The Exile
+60,Al-Mumtahanah,madinah,13,She that is to be examined
+61,As-Saf,madinah,14,The Ranks
+62,Al-Jumu'ah,madinah,11,"The Congregation, Friday"
+63,Al-Munafiqun,madinah,11,The Hypocrites
+64,At-Taghabun,madinah,18,The Mutual Disillusion
+65,At-Talaq,madinah,12,The Divorce
+66,At-Tahrim,madinah,12,The Prohibition
+67,Al-Mulk,makkah,30,The Sovereignty
+68,Al-Qalam,makkah,52,The Pen
+69,Al-Haqqah,makkah,52,The Reality
+70,Al-Ma'arij,makkah,44,The Ascending Stairways
+71,Nuh,makkah,28,Noah
+72,Al-Jinn,makkah,28,The Jinn
+73,Al-Muzzammil,makkah,20,The Enshrouded One
+74,Al-Muddaththir,makkah,56,The Cloaked One
+75,Al-Qiyamah,makkah,40,The Resurrection
+76,Al-Insan,madinah,31,The Man
+77,Al-Mursalat,makkah,50,The Emissaries
+78,An-Naba,makkah,40,The Tidings
+79,An-Nazi'at,makkah,46,Those who drag forth
+80,'Abasa,makkah,42,He Frowned
+81,At-Takwir,makkah,29,The Overthrowing
+82,Al-Infitar,makkah,19,The Cleaving
+83,Al-Mutaffifin,makkah,36,The Defrauding
+84,Al-Inshiqaq,makkah,25,The Sundering
+85,Al-Buruj,makkah,22,The Mansions of the Stars
+86,At-Tariq,makkah,17,The Nightcommer
+87,Al-A'la,makkah,19,The Most High
+88,Al-Ghashiyah,makkah,26,The Overwhelming
+89,Al-Fajr,makkah,30,The Dawn
+90,Al-Balad,makkah,20,The City
+91,Ash-Shams,makkah,15,The Sun
+92,Al-Layl,makkah,21,The Night
+93,Ad-Duhaa,makkah,11,The Morning Hours
+94,Ash-Sharh,makkah,8,The Relief
+95,At-Tin,makkah,8,The Fig
+96,Al-'Alaq,makkah,19,The Clot
+97,Al-Qadr,makkah,5,The Power
+98,Al-Bayyinah,madinah,8,The Clear Proof
+99,Az-Zalzalah,madinah,8,The Earthquake
+100,Al-'Adiyat,makkah,11,The Courser
+101,Al-Qari'ah,makkah,11,The Calamity
+102,At-Takathur,makkah,8,The Rivalry in world increase
+103,Al-'Asr,makkah,3,The Declining Day
+104,Al-Humazah,makkah,9,The Traducer
+105,Al-Fil,makkah,5,The Elephant
+106,Quraysh,makkah,4,Quraysh
+107,Al-Ma'un,makkah,7,The Small kindnesses
+108,Al-Kawthar,makkah,3,The Abundance
+109,Al-Kafirun,makkah,6,The Disbelievers
+110,An-Nasr,madinah,3,The Divine Support
+111,Al-Masad,makkah,5,The Palm Fiber
+112,Al-Ikhlas,makkah,4,The Sincerity
+113,Al-Falaq,makkah,5,The Daybreak
+114,An-Nas,makkah,6,Mankind
