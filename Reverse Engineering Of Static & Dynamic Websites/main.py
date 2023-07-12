@@ -35,7 +35,7 @@ def get_data(url: str, header: dict) -> list:
 
     product_data = []
     
-    for response in responses:
+    for response in responses: 
         if response is not None and response.status_code == 200:
             json_data = response.json()
             print(f'Now we are on page number: {json_data["currentPage"]}')
