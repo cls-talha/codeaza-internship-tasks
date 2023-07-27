@@ -1,0 +1,31 @@
+,timestamp,symbol,name,last_price,change,change_percentage
+0,2023-07-27 14:33:40,META,"Meta Platforms, Inc.",298.57,+4.10,+1.39%
+1,2023-07-27 14:33:40,XPEV,XPeng Inc.,19.46,+4.10,+26.69%
+2,2023-07-27 14:33:40,NIO,NIO Inc.,13.17,+1.26,+10.58%
+3,2023-07-27 14:33:40,NOW,"ServiceNow, Inc.",577.27,-5.11,-0.88%
+4,2023-07-27 14:33:40,RIVN,"Rivian Automotive, Inc.",27.15,+1.80,+7.10%
+5,2023-07-27 14:33:40,CMG,"Chipotle Mexican Grill, Inc.","2,087.86",-4.48,-0.21%
+6,2023-07-27 14:33:40,BARC.L,Barclays PLC,157.14,-6.92,-4.22%
+7,2023-07-27 14:33:40,SIMO,Silicon Motion Technology Corporation,65.35,+13.15,+25.19%
+8,2023-07-27 14:33:40,MU,"Micron Technology, Inc.",67.38,+1.70,+2.59%
+9,2023-07-27 14:33:40,NQ=F,Nasdaq 100 Sep 23,"15,786.50",+175.75,+1.13%
+10,2023-07-27 14:33:40,SHEL,Shell plc,62.62,-0.41,-0.65%
+11,2023-07-27 14:33:40,TSLA,"Tesla, Inc.",264.35,-0.93,-0.35%
+12,2023-07-27 14:33:40,NVDA,NVIDIA Corporation,454.52,-2.27,-0.50%
+13,2023-07-27 14:33:40,ENVX,Enovix Corporation,19.60,+0.58,+3.05%
+14,2023-07-27 14:33:40,MNK,Mallinckrodt plc,1.2600,+0.8200,+186.36%
+15,2023-07-27 14:33:40,TQQQ,ProShares UltraPro QQQ,43.27,-0.45,-1.03%
+16,2023-07-27 14:33:40,MXL,"MaxLinear, Inc.",29.61,-4.39,-12.91%
+17,2023-07-27 14:33:40,SHEL.L,Shell plc,"2,359.00",-37.50,-1.56%
+18,2023-07-27 14:33:40,BA,The Boeing Company,232.80,+18.68,+8.72%
+19,2023-07-27 14:33:40,SOXL,Direxion Daily Semiconductor Bull 3X Shares,25.06,-1.07,-4.09%
+20,2023-07-27 14:33:40,PLTR,Palantir Technologies Inc.,16.43,-0.12,-0.73%
+21,2023-07-27 14:33:40,QQQ,Invesco QQQ Trust,377.52,-1.26,-0.33%
+22,2023-07-27 14:33:40,VOW3.DE,Volkswagen AG,118.86,-4.64,-3.76%
+23,2023-07-27 14:33:40,CNA.L,Centrica plc,130.75,+6.75,+5.44%
+24,2023-07-27 14:33:40,NESTE.HE,Neste Oyj,32.08,-5.62,-14.91%
+25,2023-07-27 14:33:40,ALGN,"Align Technology, Inc.",339.85,+7.71,+2.32%
+26,2023-07-27 14:33:40,U,Unity Software Inc.,43.33,+0.13,+0.30%
+27,2023-07-27 14:33:40,QS,QuantumScape Corporation,9.37,+0.01,+0.11%
+28,2023-07-27 14:33:40,TLRY,"Tilray Brands, Inc.",1.9300,+0.2500,+14.88%
+29,2023-07-27 14:33:40,AMD,"Advanced Micro Devices, Inc.",110.09,-2.91,-2.58%

@@ -1,0 +1,1041 @@
+2023-07-26 19:58:22,142 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-26 19:58:22,142 - INFO - [33mPress CTRL+C to quit[0m
+2023-07-26 19:58:43,409 - INFO - 127.0.0.1 - - [26/Jul/2023 19:58:43] "[33mGET / HTTP/1.1[0m" 404 -
+2023-07-26 19:58:44,009 - INFO - 127.0.0.1 - - [26/Jul/2023 19:58:44] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-07-26 19:58:58,243 - INFO - Scrapy 2.9.0 started (bot: scraper)
+2023-07-26 19:58:58,248 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.2, Platform Linux-6.1.39-1-lts-x86_64-with-glibc2.37
+2023-07-26 19:58:58,257 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 19:58:58,259 - DEBUG - Using selector: EpollSelector
+2023-07-26 19:58:58,260 - DEBUG - Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-07-26 19:58:58,261 - DEBUG - Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-07-26 19:58:58,297 - INFO - Telnet Password: f630f827fa85c9cf
+2023-07-26 19:58:58,507 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2023-07-26 19:58:58,672 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-07-26 19:58:58,675 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-07-26 19:58:58,675 - INFO - Enabled item pipelines:
+[]
+2023-07-26 19:58:58,675 - INFO - Spider opened
+2023-07-26 19:58:58,797 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-07-26 19:58:58,798 - INFO - Telnet console listening on 127.0.0.1:6023
+2023-07-26 19:58:58,798 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 68, in fetch_data
+    process.start()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/crawler.py", line 383, in start
+    install_shutdown_handlers(self._signal_shutdown)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/utils/ossignal.py", line 19, in install_shutdown_handlers
+    reactor._handleSignals()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/posixbase.py", line 142, in _handleSignals
+    _SignalReactorMixin._handleSignals(self)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/base.py", line 1281, in _handleSignals
+    signal.signal(signal.SIGINT, reactorBaseSelf.sigInt)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/signal.py", line 56, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread of the main interpreter
+2023-07-26 19:58:58,804 - INFO - 127.0.0.1 - - [26/Jul/2023 19:58:58] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 19:59:02,069 - INFO - 127.0.0.1 - - [26/Jul/2023 19:59:02] "[32mGET /fetch-data HTTP/1.1[0m" 308 -
+2023-07-26 19:59:02,099 - INFO - Scrapy 2.9.0 started (bot: scraper)
+2023-07-26 19:59:02,099 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.2, Platform Linux-6.1.39-1-lts-x86_64-with-glibc2.37
+2023-07-26 19:59:02,104 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 19:59:02,105 - DEBUG - Using selector: EpollSelector
+2023-07-26 19:59:02,106 - DEBUG - Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-07-26 19:59:02,106 - DEBUG - Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-07-26 19:59:02,107 - INFO - Telnet Password: 61bdc992796c5b55
+2023-07-26 19:59:02,108 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2023-07-26 19:59:02,110 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-07-26 19:59:02,111 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-07-26 19:59:02,112 - INFO - Enabled item pipelines:
+[]
+2023-07-26 19:59:02,112 - INFO - Spider opened
+2023-07-26 19:59:02,113 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-07-26 19:59:02,114 - INFO - Telnet console listening on 127.0.0.1:6024
+2023-07-26 19:59:02,115 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 68, in fetch_data
+    process.start()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/crawler.py", line 383, in start
+    install_shutdown_handlers(self._signal_shutdown)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/utils/ossignal.py", line 19, in install_shutdown_handlers
+    reactor._handleSignals()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/posixbase.py", line 142, in _handleSignals
+    _SignalReactorMixin._handleSignals(self)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/base.py", line 1281, in _handleSignals
+    signal.signal(signal.SIGINT, reactorBaseSelf.sigInt)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/signal.py", line 56, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread of the main interpreter
+2023-07-26 19:59:02,116 - INFO - 127.0.0.1 - - [26/Jul/2023 19:59:02] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 19:59:35,911 - ERROR - [ERROR] Failed to fetch data from the database
+2023-07-26 19:59:35,912 - ERROR - Exception on /get-all-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/mysql/connector/connection_cext.py", line 302, in _open_connection
+    self._cmysql.connect(**cnx_kwargs)
+_mysql_connector.MySQLInterfaceError: Unknown database 'scraping_db'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 83, in get_all_data
+    my_database = connector.connect(
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/mysql/connector/pooling.py", line 293, in connect
+    return CMySQLConnection(*args, **kwargs)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/mysql/connector/connection_cext.py", line 128, in __init__
+    self.connect(**kwargs)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/mysql/connector/abstracts.py", line 1217, in connect
+    self._open_connection()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/mysql/connector/connection_cext.py", line 307, in _open_connection
+    raise get_mysql_exception(
+mysql.connector.errors.ProgrammingError: 1049 (42000): Unknown database 'scraping_db'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 98, in get_all_data
+    raise ValueError(str(e))
+ValueError: 1049 (42000): Unknown database 'scraping_db'
+2023-07-26 19:59:35,920 - INFO - 127.0.0.1 - - [26/Jul/2023 19:59:35] "[35m[1mGET /get-all-data/ HTTP/1.1[0m" 500 -
+2023-07-26 20:00:31,730 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-26 20:00:31,730 - INFO - [33mPress CTRL+C to quit[0m
+2023-07-26 20:00:39,662 - INFO - 127.0.0.1 - - [26/Jul/2023 20:00:39] "GET /get-all-data/ HTTP/1.1" 200 -
+2023-07-26 20:01:05,083 - INFO - Scrapy 2.9.0 started (bot: scraper)
+2023-07-26 20:01:05,088 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.2, Platform Linux-6.1.39-1-lts-x86_64-with-glibc2.37
+2023-07-26 20:01:05,097 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 20:01:05,098 - DEBUG - Using selector: EpollSelector
+2023-07-26 20:01:05,100 - DEBUG - Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-07-26 20:01:05,100 - DEBUG - Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-07-26 20:01:05,135 - INFO - Telnet Password: 75ed27951c60d0a7
+2023-07-26 20:01:05,322 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2023-07-26 20:01:05,486 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-07-26 20:01:05,490 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-07-26 20:01:05,490 - INFO - Enabled item pipelines:
+[]
+2023-07-26 20:01:05,490 - INFO - Spider opened
+2023-07-26 20:01:05,654 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-07-26 20:01:05,655 - INFO - Telnet console listening on 127.0.0.1:6023
+2023-07-26 20:01:05,656 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 68, in fetch_data
+    process.start()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/crawler.py", line 383, in start
+    install_shutdown_handlers(self._signal_shutdown)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/utils/ossignal.py", line 19, in install_shutdown_handlers
+    reactor._handleSignals()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/posixbase.py", line 142, in _handleSignals
+    _SignalReactorMixin._handleSignals(self)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/base.py", line 1281, in _handleSignals
+    signal.signal(signal.SIGINT, reactorBaseSelf.sigInt)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/signal.py", line 56, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread of the main interpreter
+2023-07-26 20:01:05,658 - INFO - 127.0.0.1 - - [26/Jul/2023 20:01:05] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 20:11:45,626 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-26 20:11:45,626 - INFO - [33mPress CTRL+C to quit[0m
+2023-07-26 20:11:53,510 - INFO - Scrapy 2.9.0 started (bot: scraper)
+2023-07-26 20:11:53,515 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.2, Platform Linux-6.1.39-1-lts-x86_64-with-glibc2.37
+2023-07-26 20:11:53,530 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 20:11:53,532 - DEBUG - Using selector: EpollSelector
+2023-07-26 20:11:53,534 - DEBUG - Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-07-26 20:11:53,535 - DEBUG - Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-07-26 20:11:53,584 - INFO - Telnet Password: b5e8b7cfe225aeab
+2023-07-26 20:11:53,763 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2023-07-26 20:11:53,917 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-07-26 20:11:53,920 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-07-26 20:11:53,920 - INFO - Enabled item pipelines:
+[]
+2023-07-26 20:11:53,921 - INFO - Spider opened
+2023-07-26 20:11:54,056 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-07-26 20:11:54,057 - INFO - Telnet console listening on 127.0.0.1:6023
+2023-07-26 20:11:54,060 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 68, in fetch_data
+    process.start()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/crawler.py", line 383, in start
+    install_shutdown_handlers(self._signal_shutdown)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/utils/ossignal.py", line 19, in install_shutdown_handlers
+    reactor._handleSignals()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/posixbase.py", line 142, in _handleSignals
+    _SignalReactorMixin._handleSignals(self)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/base.py", line 1281, in _handleSignals
+    signal.signal(signal.SIGINT, reactorBaseSelf.sigInt)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/signal.py", line 56, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread of the main interpreter
+2023-07-26 20:11:54,061 - INFO - 127.0.0.1 - - [26/Jul/2023 20:11:54] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 20:15:38,640 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-26 20:15:38,640 - INFO - [33mPress CTRL+C to quit[0m
+2023-07-26 20:15:43,255 - INFO - Scrapy 2.9.0 started (bot: scraper)
+2023-07-26 20:15:43,260 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.2, Platform Linux-6.1.39-1-lts-x86_64-with-glibc2.37
+2023-07-26 20:15:43,272 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 20:15:43,274 - DEBUG - Using selector: EpollSelector
+2023-07-26 20:15:43,276 - DEBUG - Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-07-26 20:15:43,276 - DEBUG - Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-07-26 20:15:43,328 - INFO - Telnet Password: a59d7ad8238a85cc
+2023-07-26 20:15:43,589 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2023-07-26 20:15:43,758 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-07-26 20:15:43,761 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-07-26 20:15:43,762 - INFO - Enabled item pipelines:
+[]
+2023-07-26 20:15:43,762 - INFO - Spider opened
+2023-07-26 20:15:43,890 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-07-26 20:15:43,891 - INFO - Telnet console listening on 127.0.0.1:6023
+2023-07-26 20:15:43,893 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 68, in fetch_data
+    process.start()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/crawler.py", line 383, in start
+    install_shutdown_handlers(self._signal_shutdown)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/utils/ossignal.py", line 19, in install_shutdown_handlers
+    reactor._handleSignals()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/posixbase.py", line 142, in _handleSignals
+    _SignalReactorMixin._handleSignals(self)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/base.py", line 1281, in _handleSignals
+    signal.signal(signal.SIGINT, reactorBaseSelf.sigInt)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/signal.py", line 56, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread of the main interpreter
+2023-07-26 20:15:43,895 - INFO - 127.0.0.1 - - [26/Jul/2023 20:15:43] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 20:20:02,918 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-26 20:20:02,918 - INFO - [33mPress CTRL+C to quit[0m
+2023-07-26 20:20:09,550 - INFO - 127.0.0.1 - - [26/Jul/2023 20:20:09] "GET /fetch-data/ HTTP/1.1" 200 -
+2023-07-26 20:20:09,573 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/werkzeug/serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/werkzeug/serving.py", line 328, in execute
+    write(data)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/werkzeug/serving.py", line 296, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes
+2023-07-26 20:20:11,486 - INFO - 127.0.0.1 - - [26/Jul/2023 20:20:11] "GET /fetch-data/ HTTP/1.1" 200 -
+2023-07-26 20:20:11,499 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/werkzeug/serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/werkzeug/serving.py", line 328, in execute
+    write(data)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/werkzeug/serving.py", line 296, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes
+2023-07-26 20:20:28,820 - INFO - 127.0.0.1 - - [26/Jul/2023 20:20:28] "GET /fetch-data/ HTTP/1.1" 200 -
+2023-07-26 20:20:28,832 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/werkzeug/serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/werkzeug/serving.py", line 328, in execute
+    write(data)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/werkzeug/serving.py", line 296, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes
+2023-07-26 20:20:34,750 - INFO - 127.0.0.1 - - [26/Jul/2023 20:20:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2023-07-26 20:21:02,858 - INFO - 127.0.0.1 - - [26/Jul/2023 20:21:02] "GET /fetch-data/ HTTP/1.1" 200 -
+2023-07-26 20:21:02,871 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/werkzeug/serving.py", line 364, in run_wsgi
+    execute(self.server.app)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/werkzeug/serving.py", line 328, in execute
+    write(data)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/werkzeug/serving.py", line 296, in write
+    assert isinstance(data, bytes), "applications must write bytes"
+AssertionError: applications must write bytes
+2023-07-26 20:21:08,142 - INFO - 127.0.0.1 - - [26/Jul/2023 20:21:08] "[33mGET /get-all-data/ HTTP/1.1[0m" 404 -
+2023-07-26 20:21:59,349 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-26 20:21:59,349 - INFO - [33mPress CTRL+C to quit[0m
+2023-07-26 20:22:04,547 - INFO - 127.0.0.1 - - [26/Jul/2023 20:22:04] "GET /get-all-data/ HTTP/1.1" 200 -
+2023-07-26 20:22:09,893 - INFO - Scrapy 2.9.0 started (bot: scraper)
+2023-07-26 20:22:09,898 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.2, Platform Linux-6.1.39-1-lts-x86_64-with-glibc2.37
+2023-07-26 20:22:09,912 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 20:22:09,915 - DEBUG - Using selector: EpollSelector
+2023-07-26 20:22:09,917 - DEBUG - Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-07-26 20:22:09,918 - DEBUG - Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-07-26 20:22:09,963 - INFO - Telnet Password: e578cd1ad4f4565d
+2023-07-26 20:22:10,137 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2023-07-26 20:22:10,324 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-07-26 20:22:10,327 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-07-26 20:22:10,327 - INFO - Enabled item pipelines:
+[]
+2023-07-26 20:22:10,328 - INFO - Spider opened
+2023-07-26 20:22:10,471 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-07-26 20:22:10,472 - INFO - Telnet console listening on 127.0.0.1:6023
+2023-07-26 20:22:10,473 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 67, in fetch_data
+    process.start()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/crawler.py", line 383, in start
+    install_shutdown_handlers(self._signal_shutdown)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/utils/ossignal.py", line 19, in install_shutdown_handlers
+    reactor._handleSignals()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/posixbase.py", line 142, in _handleSignals
+    _SignalReactorMixin._handleSignals(self)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/base.py", line 1281, in _handleSignals
+    signal.signal(signal.SIGINT, reactorBaseSelf.sigInt)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/signal.py", line 56, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread of the main interpreter
+2023-07-26 20:22:10,475 - INFO - 127.0.0.1 - - [26/Jul/2023 20:22:10] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 20:23:59,377 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-26 20:23:59,377 - INFO - [33mPress CTRL+C to quit[0m
+2023-07-26 20:24:09,011 - INFO - Log opened.
+2023-07-26 20:24:09,034 - INFO - Scrapy 2.9.0 started (bot: scraper)
+2023-07-26 20:24:09,038 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.2, Platform Linux-6.1.39-1-lts-x86_64-with-glibc2.37
+2023-07-26 20:24:09,047 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'DOWNLOAD_TIMEOUT': 30,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_LEVEL': 'ERROR',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'RETRY_TIMES': 1,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 20:24:09,048 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 66, in fetch_data
+    scrapydo.run_spider(MyUniqueSpider)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapydo/api.py", line 127, in run_spider
+    return wait_for(timeout, _run_spider_in_reactor, spider_cls, **kwargs)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapydo/api.py", line 284, in wait_for
+    return result.wait(timeout)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/crochet/_eventloop.py", line 196, in wait
+    result.raiseException()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/python/failure.py", line 504, in raiseException
+    raise self.value.with_traceback(self.tb)
+Exception: The installed reactor (twisted.internet.epollreactor.EPollReactor) does not match the requested one (twisted.internet.asyncioreactor.AsyncioSelectorReactor)
+2023-07-26 20:24:09,056 - INFO - 127.0.0.1 - - [26/Jul/2023 20:24:09] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 20:24:10,148 - INFO - Scrapy 2.9.0 started (bot: scraper)
+2023-07-26 20:24:10,150 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.2, Platform Linux-6.1.39-1-lts-x86_64-with-glibc2.37
+2023-07-26 20:24:10,161 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'DOWNLOAD_TIMEOUT': 30,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_LEVEL': 'ERROR',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'RETRY_TIMES': 1,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 20:24:10,163 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 66, in fetch_data
+    scrapydo.run_spider(MyUniqueSpider)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapydo/api.py", line 127, in run_spider
+    return wait_for(timeout, _run_spider_in_reactor, spider_cls, **kwargs)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapydo/api.py", line 284, in wait_for
+    return result.wait(timeout)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/crochet/_eventloop.py", line 196, in wait
+    result.raiseException()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/python/failure.py", line 504, in raiseException
+    raise self.value.with_traceback(self.tb)
+Exception: The installed reactor (twisted.internet.epollreactor.EPollReactor) does not match the requested one (twisted.internet.asyncioreactor.AsyncioSelectorReactor)
+2023-07-26 20:24:10,165 - INFO - 127.0.0.1 - - [26/Jul/2023 20:24:10] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 20:24:10,570 - INFO - Scrapy 2.9.0 started (bot: scraper)
+2023-07-26 20:24:10,570 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.2, Platform Linux-6.1.39-1-lts-x86_64-with-glibc2.37
+2023-07-26 20:24:10,575 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'DOWNLOAD_TIMEOUT': 30,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_LEVEL': 'ERROR',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'RETRY_TIMES': 1,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 20:24:10,575 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 66, in fetch_data
+    scrapydo.run_spider(MyUniqueSpider)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapydo/api.py", line 127, in run_spider
+    return wait_for(timeout, _run_spider_in_reactor, spider_cls, **kwargs)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapydo/api.py", line 284, in wait_for
+    return result.wait(timeout)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/crochet/_eventloop.py", line 196, in wait
+    result.raiseException()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/python/failure.py", line 504, in raiseException
+    raise self.value.with_traceback(self.tb)
+Exception: The installed reactor (twisted.internet.epollreactor.EPollReactor) does not match the requested one (twisted.internet.asyncioreactor.AsyncioSelectorReactor)
+2023-07-26 20:24:10,576 - INFO - 127.0.0.1 - - [26/Jul/2023 20:24:10] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 20:24:10,946 - INFO - Scrapy 2.9.0 started (bot: scraper)
+2023-07-26 20:24:10,946 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.2, Platform Linux-6.1.39-1-lts-x86_64-with-glibc2.37
+2023-07-26 20:24:10,949 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'DOWNLOAD_TIMEOUT': 30,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_LEVEL': 'ERROR',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'RETRY_TIMES': 1,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 20:24:10,950 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 66, in fetch_data
+    scrapydo.run_spider(MyUniqueSpider)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapydo/api.py", line 127, in run_spider
+    return wait_for(timeout, _run_spider_in_reactor, spider_cls, **kwargs)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapydo/api.py", line 284, in wait_for
+    return result.wait(timeout)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/crochet/_eventloop.py", line 196, in wait
+    result.raiseException()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/python/failure.py", line 504, in raiseException
+    raise self.value.with_traceback(self.tb)
+Exception: The installed reactor (twisted.internet.epollreactor.EPollReactor) does not match the requested one (twisted.internet.asyncioreactor.AsyncioSelectorReactor)
+2023-07-26 20:24:10,951 - INFO - 127.0.0.1 - - [26/Jul/2023 20:24:10] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 20:24:11,256 - INFO - Scrapy 2.9.0 started (bot: scraper)
+2023-07-26 20:24:11,256 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.2, Platform Linux-6.1.39-1-lts-x86_64-with-glibc2.37
+2023-07-26 20:24:11,263 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'DOWNLOAD_TIMEOUT': 30,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_LEVEL': 'ERROR',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'RETRY_TIMES': 1,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 20:24:11,263 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 66, in fetch_data
+    scrapydo.run_spider(MyUniqueSpider)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapydo/api.py", line 127, in run_spider
+    return wait_for(timeout, _run_spider_in_reactor, spider_cls, **kwargs)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapydo/api.py", line 284, in wait_for
+    return result.wait(timeout)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/crochet/_eventloop.py", line 196, in wait
+    result.raiseException()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/python/failure.py", line 504, in raiseException
+    raise self.value.with_traceback(self.tb)
+Exception: The installed reactor (twisted.internet.epollreactor.EPollReactor) does not match the requested one (twisted.internet.asyncioreactor.AsyncioSelectorReactor)
+2023-07-26 20:24:11,264 - INFO - 127.0.0.1 - - [26/Jul/2023 20:24:11] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 20:24:16,986 - INFO - Scrapy 2.9.0 started (bot: scraper)
+2023-07-26 20:24:16,986 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.2, Platform Linux-6.1.39-1-lts-x86_64-with-glibc2.37
+2023-07-26 20:24:16,997 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'DOWNLOAD_TIMEOUT': 30,
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'LOG_LEVEL': 'ERROR',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'RETRY_TIMES': 1,
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TELNETCONSOLE_ENABLED': False,
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 20:24:16,999 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 66, in fetch_data
+    scrapydo.run_spider(MyUniqueSpider)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapydo/api.py", line 127, in run_spider
+    return wait_for(timeout, _run_spider_in_reactor, spider_cls, **kwargs)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapydo/api.py", line 284, in wait_for
+    return result.wait(timeout)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/crochet/_eventloop.py", line 196, in wait
+    result.raiseException()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/python/failure.py", line 504, in raiseException
+    raise self.value.with_traceback(self.tb)
+Exception: The installed reactor (twisted.internet.epollreactor.EPollReactor) does not match the requested one (twisted.internet.asyncioreactor.AsyncioSelectorReactor)
+2023-07-26 20:24:17,001 - INFO - 127.0.0.1 - - [26/Jul/2023 20:24:17] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 20:24:28,903 - INFO - 127.0.0.1 - - [26/Jul/2023 20:24:28] "GET /get-all-data/ HTTP/1.1" 200 -
+2023-07-26 20:25:46,969 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-26 20:25:46,969 - INFO - [33mPress CTRL+C to quit[0m
+2023-07-26 20:27:24,738 - INFO - 127.0.0.1 - - [26/Jul/2023 20:27:24] "GET /get-all-data/ HTTP/1.1" 200 -
+2023-07-26 20:27:28,600 - INFO - Scrapy 2.9.0 started (bot: scraper)
+2023-07-26 20:27:28,605 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.2, Platform Linux-6.1.39-1-lts-x86_64-with-glibc2.37
+2023-07-26 20:27:28,617 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 20:27:28,620 - DEBUG - Using selector: EpollSelector
+2023-07-26 20:27:28,621 - DEBUG - Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-07-26 20:27:28,622 - DEBUG - Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-07-26 20:27:28,665 - INFO - Telnet Password: cd36c95f84331027
+2023-07-26 20:27:28,911 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2023-07-26 20:27:29,082 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-07-26 20:27:29,086 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-07-26 20:27:29,086 - INFO - Enabled item pipelines:
+[]
+2023-07-26 20:27:29,086 - INFO - Spider opened
+2023-07-26 20:27:29,231 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-07-26 20:27:29,233 - INFO - Telnet console listening on 127.0.0.1:6023
+2023-07-26 20:27:29,234 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 67, in fetch_data
+    process.start()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/crawler.py", line 383, in start
+    install_shutdown_handlers(self._signal_shutdown)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/utils/ossignal.py", line 19, in install_shutdown_handlers
+    reactor._handleSignals()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/posixbase.py", line 142, in _handleSignals
+    _SignalReactorMixin._handleSignals(self)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/base.py", line 1281, in _handleSignals
+    signal.signal(signal.SIGINT, reactorBaseSelf.sigInt)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/signal.py", line 56, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread of the main interpreter
+2023-07-26 20:27:29,236 - INFO - 127.0.0.1 - - [26/Jul/2023 20:27:29] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 20:28:00,245 - INFO - 127.0.0.1 - - [26/Jul/2023 20:28:00] "GET /get-all-data/ HTTP/1.1" 200 -
+2023-07-26 20:28:20,063 - INFO - Scrapy 2.9.0 started (bot: scraper)
+2023-07-26 20:28:20,064 - INFO - Versions: lxml 4.9.3.0, libxml2 2.10.3, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.10.12 (main, Jul  5 2023, 18:54:27) [GCC 11.2.0], pyOpenSSL 23.2.0 (OpenSSL 3.1.1 30 May 2023), cryptography 41.0.2, Platform Linux-6.1.39-1-lts-x86_64-with-glibc2.37
+2023-07-26 20:28:20,078 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 20:28:20,080 - DEBUG - Using selector: EpollSelector
+2023-07-26 20:28:20,081 - DEBUG - Using reactor: twisted.internet.asyncioreactor.AsyncioSelectorReactor
+2023-07-26 20:28:20,082 - DEBUG - Using asyncio event loop: asyncio.unix_events._UnixSelectorEventLoop
+2023-07-26 20:28:20,084 - INFO - Telnet Password: 195378be25560b50
+2023-07-26 20:28:20,085 - INFO - Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2023-07-26 20:28:20,091 - INFO - Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2023-07-26 20:28:20,094 - INFO - Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2023-07-26 20:28:20,095 - INFO - Enabled item pipelines:
+[]
+2023-07-26 20:28:20,096 - INFO - Spider opened
+2023-07-26 20:28:20,098 - INFO - Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2023-07-26 20:28:20,102 - INFO - Telnet console listening on 127.0.0.1:6024
+2023-07-26 20:28:20,103 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 67, in fetch_data
+    process.start()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/crawler.py", line 383, in start
+    install_shutdown_handlers(self._signal_shutdown)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/scrapy/utils/ossignal.py", line 19, in install_shutdown_handlers
+    reactor._handleSignals()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/posixbase.py", line 142, in _handleSignals
+    _SignalReactorMixin._handleSignals(self)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/base.py", line 1281, in _handleSignals
+    signal.signal(signal.SIGINT, reactorBaseSelf.sigInt)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/signal.py", line 56, in signal
+    handler = _signal.signal(_enum_to_int(signalnum), _enum_to_int(handler))
+ValueError: signal only works in main thread of the main interpreter
+2023-07-26 20:28:20,106 - INFO - 127.0.0.1 - - [26/Jul/2023 20:28:20] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 20:34:11,329 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-26 20:34:11,329 - INFO - [33mPress CTRL+C to quit[0m
+2023-07-26 20:34:16,057 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 20:34:46,385 - INFO - 127.0.0.1 - - [26/Jul/2023 20:34:46] "GET /get-all-data/ HTTP/1.1" 200 -
+2023-07-26 20:34:51,822 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 20:34:51,823 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 74, in fetch_data
+    reactor.run()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/base.py", line 1317, in run
+    self.startRunning(installSignalHandlers=installSignalHandlers)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/base.py", line 1299, in startRunning
+    ReactorBase.startRunning(cast(ReactorBase, self))
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/base.py", line 841, in startRunning
+    raise error.ReactorAlreadyRunning()
+twisted.internet.error.ReactorAlreadyRunning
+2023-07-26 20:34:51,827 - INFO - 127.0.0.1 - - [26/Jul/2023 20:34:51] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 20:55:13,123 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 20:59:27,525 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 21:00:10,988 - INFO - Overridden settings:
+{'BOT_NAME': 'scraper',
+ 'FEED_EXPORT_ENCODING': 'utf-8',
+ 'NEWSPIDER_MODULE': 'scraper.spiders',
+ 'REQUEST_FINGERPRINTER_IMPLEMENTATION': '2.7',
+ 'ROBOTSTXT_OBEY': True,
+ 'SPIDER_MODULES': ['scraper.spiders'],
+ 'TWISTED_REACTOR': 'twisted.internet.asyncioreactor.AsyncioSelectorReactor',
+ 'USER_AGENT': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
+               '(KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+2023-07-26 21:08:12,470 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.10.13:8000
+2023-07-26 21:08:12,470 - INFO - [33mPress CTRL+C to quit[0m
+2023-07-26 21:08:25,303 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 108, in fetch_data
+    asyncioreactor.install()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/asyncioreactor.py", line 306, in install
+    reactor = AsyncioSelectorReactor(eventloop)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/asyncioreactor.py", line 50, in __init__
+    _eventloop: AbstractEventLoop = get_event_loop()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/asyncio/events.py", line 656, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'Thread-1 (process_request_thread)'.
+2023-07-26 21:08:25,313 - INFO - 127.0.0.1 - - [26/Jul/2023 21:08:25] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 21:08:47,418 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 108, in fetch_data
+    asyncioreactor.install()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/asyncioreactor.py", line 306, in install
+    reactor = AsyncioSelectorReactor(eventloop)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/asyncioreactor.py", line 50, in __init__
+    _eventloop: AbstractEventLoop = get_event_loop()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/asyncio/events.py", line 656, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'Thread-2 (process_request_thread)'.
+2023-07-26 21:08:47,420 - INFO - 127.0.0.1 - - [26/Jul/2023 21:08:47] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-26 21:08:51,314 - INFO - 127.0.0.1 - - [26/Jul/2023 21:08:51] "GET /get-all-data/ HTTP/1.1" 200 -
+2023-07-26 21:11:29,156 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8000
+ * Running on http://192.168.10.13:8000
+2023-07-26 21:11:29,157 - INFO - [33mPress CTRL+C to quit[0m
+2023-07-26 21:11:34,570 - INFO - 127.0.0.1 - - [26/Jul/2023 21:11:34] "GET /get-all-data/ HTTP/1.1" 200 -
+2023-07-26 21:11:48,233 - ERROR - Exception on /fetch-data/ [GET]
+Traceback (most recent call last):
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/flask/app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/home/talha/Documents/Codeaze/Data Scraping API/scraper/scraper/spiders/app.py", line 108, in fetch_data
+    asyncioreactor.install()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/asyncioreactor.py", line 306, in install
+    reactor = AsyncioSelectorReactor(eventloop)
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/site-packages/twisted/internet/asyncioreactor.py", line 50, in __init__
+    _eventloop: AbstractEventLoop = get_event_loop()
+  File "/home/talha/miniconda3/envs/apidev/lib/python3.10/asyncio/events.py", line 656, in get_event_loop
+    raise RuntimeError('There is no current event loop in thread %r.'
+RuntimeError: There is no current event loop in thread 'Thread-2 (process_request_thread)'.
+2023-07-26 21:11:48,237 - INFO - 127.0.0.1 - - [26/Jul/2023 21:11:48] "[35m[1mGET /fetch-data/ HTTP/1.1[0m" 500 -
+2023-07-27 11:41:43,194 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-07-27 11:41:43,194 - INFO - [33mPress CTRL+C to quit[0m
